@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myDaysApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy every day!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLm-Cq-vrT">
+                                <rect key="frame" x="70" y="107" width="250" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change your birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR7-Ad-rAo">
+                                <rect key="frame" x="78.666666666666686" y="198" width="233" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="233" id="NTf-OL-Jf6"/>
+                                    <constraint firstAttribute="height" constant="30" id="t8z-1s-tUy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have been enjoying life for...days" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-0u-whe">
+                                <rect key="frame" x="49" y="618" width="292.33333333333331" height="20.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292.32999999999998" id="sya-wX-WCh"/>
+                                    <constraint firstAttribute="height" constant="20.329999999999998" id="xMJ-gj-tmf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnR-Yp-Nyy" colorLabel="IBBuiltInLabel-Purple">
+                                <rect key="frame" x="119" y="538" width="152" height="38"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="G0e-F5-VBQ"/>
+                                    <constraint firstAttribute="height" constant="38" id="jSd-kA-vo2"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show result">
+                                    <color key="titleColor" systemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resultButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hov-DI-c0L"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="xm6-ze-LF7">
+                                <rect key="frame" x="35" y="267" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="m0K-VL-2rQ"/>
+                                    <constraint firstAttribute="height" constant="216" id="stU-Ga-qfo"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="Izl-gq-00M"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zLm-Cq-vrT" secondAttribute="trailing" constant="70" id="60D-f8-mVw"/>
+                            <constraint firstItem="zLm-Cq-vrT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="651-cE-7w6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ofg-0u-whe" secondAttribute="trailing" constant="20" symbolic="YES" id="7kF-B7-3Pa"/>
+                            <constraint firstItem="zLm-Cq-vrT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="8Gu-PI-t2L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZnR-Yp-Nyy" secondAttribute="bottom" constant="234" id="DNh-c9-8Z6"/>
+                            <constraint firstItem="Ofg-0u-whe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="571" id="DlZ-Jn-QVZ"/>
+                            <constraint firstItem="yR7-Ad-rAo" firstAttribute="centerX" secondItem="ZnR-Yp-Nyy" secondAttribute="centerX" id="HGq-Et-iV3"/>
+                            <constraint firstItem="xm6-ze-LF7" firstAttribute="top" secondItem="yR7-Ad-rAo" secondAttribute="bottom" constant="39" id="LAq-p2-TC4"/>
+                            <constraint firstItem="ZnR-Yp-Nyy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="S2f-cH-nw0"/>
+                            <constraint firstItem="yR7-Ad-rAo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="198" id="TcA-Kh-ZAs"/>
+                            <constraint firstItem="xm6-ze-LF7" firstAttribute="centerX" secondItem="yR7-Ad-rAo" secondAttribute="centerX" id="aoY-db-VFo"/>
+                            <constraint firstItem="yR7-Ad-rAo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gYn-IG-ce5"/>
+                            <constraint firstItem="Ofg-0u-whe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="muj-Jr-alH"/>
+                            <constraint firstItem="zLm-Cq-vrT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rj8-Rf-E3g"/>
+                            <constraint firstItem="ZnR-Yp-Nyy" firstAttribute="top" secondItem="xm6-ze-LF7" secondAttribute="bottom" constant="55" id="yce-lS-mpz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Ofg-0u-whe" id="t1p-xZ-i6z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
